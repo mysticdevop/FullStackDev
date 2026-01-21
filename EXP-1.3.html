@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --card: #f2f2f2;
+    }
+
+    body.dark {
+      --bg: #1e1e1e;
+      --text: #ffffff;
+      --card: #2c2c2c;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 60px 1fr;
+      height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background: var(--card);
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background: var(--card);
+      padding: 15px;
+    }
+
+    main {
+      grid-area: main;
+      padding: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 15px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    button {
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 800px) {
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .dashboard {
+        grid-template-areas:
+          "header"
+          "main";
+        grid-template-columns: 1fr;
+      }
+      aside { display: none; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="dashboard">
+  <header>
+    <span>Admin Dashboard</span>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <aside>
+    <p><b>Menu</b></p>
+    <p>Users</p>
+    <p>Reports</p>
+    <p>Settings</p>
+  </aside>
+
+  <main>
+    <h3>Overview</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Total Users</h4>
+        <p>120</p>
+      </div>
+      <div class="card">
+        <h4>Active Sessions</h4>
+        <p>45</p>
+      </div>
+      <div class="card">
+        <h4>Revenue</h4>
+        <p>₹50,000</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle("dark");
+    const theme = document.body.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", theme);
+  }
+</script>
+
+</body>
+</html>
