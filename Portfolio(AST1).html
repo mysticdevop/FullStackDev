@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio Website of Lakshya Gupta">
+    <meta name="keywords" content="Portfolio, Web Developer, Student, Lakshya Gupta">
+    <meta name="author" content="Lakshya Gupta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Gupta | Portfolio</title>
+
+    <!-- ================= CSS STYLING ================= -->
+    <style>
+        /* --------- GENERAL PAGE STYLING --------- */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f5f9;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: "Georgia", serif;
+            color: #1f2d3d;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        /* --------- HEADER --------- */
+        header {
+            background-color: #1f2d3d;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px solid #3498db;
+        }
+
+        #site-title {
+            margin: 0;
+            font-size: 36px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #dfe6ed;
+        }
+
+        /* --------- NAVIGATION --------- */
+        nav {
+            background-color: #3498db;
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #1f2d3d;
+        }
+
+        /* --------- MAIN SECTION --------- */
+        section {
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 2px solid #e1e6ed;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        /* --------- ARTICLE --------- */
+        article {
+            border-left: 6px solid #3498db;
+        }
+
+        article h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        /* --------- SKILLS LIST --------- */
+        .skills-list {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+        }
+
+        /* --------- PROJECT CARDS --------- */
+        .project-card {
+            border: 1px solid #cfd8e3;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+
+        /* --------- FOOTER --------- */
+        footer {
+            background-color: #1f2d3d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-top: 5px solid #3498db;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* --------- ID SELECTOR EXAMPLE --------- */
+        #highlight {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        /* --------- RESPONSIVE TOUCH --------- */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1 id="site-title">Lakshya Gupta</h1>
+        <p>Aspiring Web Developer | Creative Thinker | Problem Solver</p>
+    </header>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <section>
+
+        <!-- ABOUT SECTION -->
+        <div id="about" class="content-box">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is <span id="highlight">Lakshya Gupta</span>. I am a passionate learner
+                and aspiring web developer with a strong interest in designing user-friendly websites
+                and building clean, responsive web pages using modern technologies. I enjoy solving
+                problems, learning new tools, and creating projects that combine creativity with logic.
+            </p>
+            <p>
+                I believe that good web design is not only about appearance but also about usability,
+                accessibility, and performance. My goal is to continuously improve my skills and
+                contribute to meaningful digital solutions.
+            </p>
+        </div>
+
+        <!-- ================= ARTICLE ================= -->
+        <article class="content-box">
+            <h3>Why I Love Web Development</h3>
+            <p>
+                Web development allows me to transform ideas into real, interactive experiences that
+                people can access from anywhere in the world. Using HTML5 for structure, CSS for design,
+                and JavaScript for interactivity, I can create websites that are both functional and
+                visually appealing.
+            </p>
+            <p>
+                I enjoy learning how different technologies work together to create smooth user
+                experiences. The ability to build something from scratch and watch it come alive in a
+                browser motivates me to keep improving and experimenting with new features.
+            </p>
+        </article>
+
+        <!-- SKILLS SECTION -->
+        <div id="skills" class="content-box">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5 – Semantic Web Page Structure</li>
+                <li>CSS3 – Layouts, Styling, and Responsive Design</li>
+                <li>Basic JavaScript – Interactivity and Logic</li>
+                <li>Problem Solving and Debugging</li>
+                <li>Teamwork and Communication</li>
+            </ul>
+        </div>
+
+        <!-- PROJECTS SECTION -->
+        <div id="projects" class="content-box">
+            <h2>Projects</h2>
+
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    Designed and developed a responsive portfolio website using HTML5 and CSS3 to
+                    showcase skills, projects, and contact details.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Student Registration Form</h3>
+                <p>
+                    Created a structured HTML form with CSS styling for user-friendly data input and
+                    validation.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Landing Page Design</h3>
+                <p>
+                    Built a modern landing page layout using semantic tags, proper spacing, and clean
+                    typography.
+                </p>
+            </div>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div id="contact" class="content-box">
+            <h2>Contact</h2>
+            <p>Email: lakshya8586@email.com</p>
+            <p>Phone: +91-8882185331</p>
+            <p>Location: India</p>
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>© 2026 Lakshya Gupta. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
